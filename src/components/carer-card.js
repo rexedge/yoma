@@ -1,4 +1,4 @@
-export default function CardComponent({
+export default function CarerCard({
   image,
   name,
   careType,

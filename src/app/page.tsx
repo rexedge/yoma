@@ -1,4 +1,4 @@
-import CardComponent from '../components/cardComponent';
+import CardComponent from '../components/carer-card';
 import Body from '@/components/body';
 import Section from '@/components/ui/section';
 
