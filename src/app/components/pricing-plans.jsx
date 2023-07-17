@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { pricingPlans } from "./data";
+import Link from "next/link";
 
 export default function PricingPlans() {
 	const [hoveredCard, setHoveredCard] = useState(null);
@@ -13,7 +14,7 @@ export default function PricingPlans() {
 				return (
 					<div
 						key={plan.title}
-						className={`max-w-[388px] mx-auto relative border border-slate-200 shadow-xl rounded-3xl flex flex-col ${
+						className={`hover:scale-105  transition-all duration-500 max-w-[388px] mx-auto relative border border-slate-200 shadow-xl rounded-3xl flex flex-col ${
 							isHovered ? "bg-[#45214A]" : "bg-[#fefefe]"
 						}`}
 						onMouseEnter={() => setHoveredCard(index)}
@@ -22,15 +23,13 @@ export default function PricingPlans() {
 						{/* Card SVG (heart) */}
 						<div className='w-20 h-20 pt-8 mx-auto'>
 							<div
-								dangerouslySetInnerHTML={{
-									__html: plan.svgPath,
-								}}
+								
 								className={
 									isHovered
 										? "fill-[#EBB10A]"
 										: "#EBB10A"
 								}
-							/>
+							>{plan.svgPath}</div>
 						</div>
 
 						{/* Card top info */}
@@ -84,7 +83,7 @@ export default function PricingPlans() {
 						</div>
 
 						{/* Features */}
-						<ul className='mt-4 mx-12 space-y-4 flex-1'>
+						<ul className='mt-4 mx-auto space-y-4 flex-1 '>
 							{plan.features.map((feature, index) => (
 								<li
 									key={index}
@@ -114,16 +113,16 @@ export default function PricingPlans() {
 						</ul>
 
 						{/* Call to action */}
-						<a
+						<Link
 							href='#'
-							className={`text-white text-center mt-8 block px-6 py-4 text-sm font-semibold leading-4 rounded-2xl shadow-md w-[244px] h-[48px] ml-16 translate-y-1/2 bottom-0 ${
+							className={`text-center mt-8 block px-6 py-4 text-sm font-semibold leading-4 rounded-2xl shadow-md w-[244px] h-[48px] ml-16 translate-y-1/2 bottom-0 ${
 								isHovered
-									? "bg-yellow-400 text-purple-900"
+									? "bg-yellow-400 text-[#45214A]"
 									: "bg-[#45214A] text-white"
 							}`}
 						>
 							{plan.cta}
-						</a>
+						</Link>
 					</div>
 				);
 			})}
