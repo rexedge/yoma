@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { pricingPlans } from "./data";
+import { pricingPlans } from "../utils/data";
 import Link from "next/link";
 
 export default function PricingPlans() {
@@ -23,13 +23,14 @@ export default function PricingPlans() {
 						{/* Card SVG (heart) */}
 						<div className='w-20 h-20 pt-8 mx-auto'>
 							<div
-								
 								className={
 									isHovered
 										? "fill-[#EBB10A]"
 										: "#EBB10A"
 								}
-							>{plan.svgPath}</div>
+							>
+								{plan.svgPath}
+							</div>
 						</div>
 
 						{/* Card top info */}
