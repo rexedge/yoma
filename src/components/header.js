@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Section from "./ui/section";
+import Image from "next/image";
 
 export default function Header() {
     return (
@@ -17,7 +18,7 @@ export default function Header() {
                     </Link>
                 </div>
                 <div>
-                    <img src="/argue.png" />
+                    <Image height={500} width={500} alt="" src="/argue.png" />
                 </div>
                 <div className="flex gap-5 items-center">
                     <Link href="/Sign-in">
