@@ -1,10 +1,16 @@
 import CardComponent from '../components/carer-card';
 import Body from '@/components/body';
+import SearchInputBtn from '@/components/searchInputBtn';
 import Section from '@/components/ui/section';
 
 export default function Home() {
 	return (
 		<>
+			<Section>
+				<div className='h-screen flex items-center justify-center'>
+					<SearchInputBtn />
+				</div>
+			</Section>
 			<Section>
 				<h6 className='font-bold text-[36px] text-center'>
 					Top Carers
