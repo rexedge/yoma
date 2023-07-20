@@ -7,7 +7,7 @@ export default function PricingPlans() {
 	const [hoveredCard, setHoveredCard] = useState(null);
 
 	return (
-		<div className='grid lg:grid-cols-3 gap-10 mx-auto max-w-7xl lg:gap-8 py-6 px-4 sm:px-6 lg:px-8 h-[500px]'>
+		<div className=' grid lg:grid-cols-3 gap-10 mx-auto max-w-7xl lg:gap-8 py-6 px-4 sm:px-6 lg:px-8 h-[500px]'>
 			{pricingPlans.map((plan, index) => {
 				const isHovered = index === hoveredCard;
 

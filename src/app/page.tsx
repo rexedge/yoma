@@ -1,7 +1,7 @@
-import CardComponent from '../components/carer-card';
-import Body from '@/components/body';
-import Section from '@/components/ui/section';
-import PricingPlans from '../components/pricing-plans';
+import CardComponent from "../components/carer-card";
+import Body from "@/components/body";
+import Section from "@/components/ui/section";
+import PricingPlans from "../components/pricing-plans";
 import HowItWorks from "../components/howitworks";
 
 export default function Home() {
@@ -57,10 +57,12 @@ export default function Home() {
 				</div>
 			</Section>
 			<Section>
-				<div className='mx-auto justify-center text-center max-w-7xl w-screen bg-[#fefefe] px-0 py-16 w-[1728px] h-[676px] '>
-				<h3>How It Works</h3>
-			</div>
-			<HowItWorks/>
+				<div className='mx-auto font-bold text-3xl justify-center text-center max-w-7xl bg-[#fefefe] px-0 py-24 w-[100%]'>
+					<h3 className='pb-24 text-color-[#020202] text-center'>
+						How It Works
+					</h3>
+					{<HowItWorks />}
+				</div>
 			</Section>
 			<Section>
 				<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
@@ -70,12 +72,14 @@ export default function Home() {
 				</div>
 			</Section>
 			<Section>
-				<div className='mx-auto justify-center w-screen px-0 py-12 w-96 h-full'>
-				<h1 className='text-2xl text-center text-[#020202] font-bold  sm:leading-tight sm:tracking-tight'>
-					Lets Care For You, Subscribe To A Care Plan!
-				</h1>
-			</div>
-      <PricingPlans/>
+				<div className='bg-[#fefefe] h-[100%] w-[100%] px-0  py-[100px]'>
+					<div className='mx-auto justify-center px-0 pb-8 max-w-7xl'>
+						<h1 className='text-2xl text-center text-[#020202] font-bold sm:leading-tight sm:tracking-tight'>
+							Lets Care For You, Subscribe To A Care Plan!
+						</h1>
+					</div>
+					<PricingPlans />
+				</div>
 			</Section>
 		</>
 	);
