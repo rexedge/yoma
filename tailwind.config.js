@@ -24,6 +24,11 @@ module.exports = {
             },
           }
       },
+      colors: {
+        primary: {
+          light: '#DAD3DB'
+        }
+      }
     },
   },
   plugins: [],
